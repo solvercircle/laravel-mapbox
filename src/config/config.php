@@ -26,7 +26,7 @@ return array(
 	//Set if it should show the custom marker icon by default
 	'show_marker_icon'=>false,
 	//Default custom marker icon image url
-	'marker_icon_url'=>'https://eastpaloalto.shotspotter.net/assets/images/icons/incident_map_marker.png',
+	'marker_icon_url'=>'',
 	//Default custom marker icon width
 	'marker_icon_width'=>24,
 	//Default custom marker icon height
