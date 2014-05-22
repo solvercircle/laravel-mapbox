@@ -13,7 +13,8 @@
     },
     "autoload": {
         "classmap": [
-            "src/classes"
+            "src/classes",
+			"src/Solvercircle/Scbanner/Console"
         ],
         "psr-0": {
             "Solvercircle\\Mapbox\\": "src/"
