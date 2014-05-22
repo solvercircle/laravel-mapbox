@@ -4,7 +4,7 @@
 <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.ie.css' rel='stylesheet'>
 <![endif]-->
 
-<div id="{{$map_input["map_id"]}}" style="width:{{$map_input["width"]}}; height:{{$map_input["height"]}};"></div>
+<div id="{{$map_input["map_id"]}}" style="width:{{$map_input["width"]}}; height:{{$map_input["height"]}};" class="{{$map_input["class"]}}"></div>
 
 <script type="text/javascript">
 //var map = L.mapbox.map('{{$map_input["map_id"]}}', '{{$map_input["key"]}}', {attributionControl: false});

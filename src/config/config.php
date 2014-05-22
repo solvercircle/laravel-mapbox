@@ -2,7 +2,7 @@
 
 return array(
     //Your Mapbox API Key
-    'key' => 'examples.map-9ijuk24y',
+    'key' => '',
 	//Width of the map container. You can use pixel or percentage value
     'width' => '400px',
     //Height of the map container. You can use pixel or percentage value
@@ -14,9 +14,9 @@ return array(
     //default id of the map container. It must be unique on the page
     'map_id' => 'mapbox',
 	//Default title of the center marker    
-    'center_title'=>'Hello',
+    'center_title'=>'',
 	//Default description of the center marker
-	'center_description'=>'Hi',
+	'center_description'=>'',
 	//Set if it will show marker at center
 	'show_center_marker'=>true,
 	//The default size of any marker in the map
