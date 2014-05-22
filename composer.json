@@ -1,0 +1,23 @@
+{
+    "name": "solvercircle/mapbox",
+    "description": "This laravel package will help to show mapbox map with given options",
+    "authors": [
+        {
+            "name": "SolverCircle",
+            "email": "developers@solvercircle.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/classes"
+        ],
+        "psr-0": {
+            "Solvercircle\\Mapbox\\": "src/"
+        }
+    },
+    "minimum-stability": "stable"
+}
