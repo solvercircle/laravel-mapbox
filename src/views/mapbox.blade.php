@@ -43,33 +43,35 @@ var map = L.mapbox.map('{{$map_input["map_id"]}}', '{{$map_input["key"]}}');
 			geoJson.push(center_marker);
 		@endif
 		
-		@foreach($map_input["markers"] as $value)
-			var marker={
-				"type": "Feature",
-				"geometry": {
-					"type": "Point",
-					"coordinates": [{{$value["lon"]}}, {{$value["lat"]}}]
-				},
-				"properties": {
-					@if (isset($value['title']))
-						title: '{{$value["title"]}}',
-					@endif
-					@if (isset($value['description']))
-						description: '{{$value["description"]}}',				   
-					@endif
-					@if (isset($value['icon_url']))
-						"icon": {
-							"iconUrl": '{{$value["icon_url"]}}',
-							"iconSize": [{{$value["icon_width"]}}, {{$value["icon_height"]}}] // size of the icon
-						}
-					@else	             								
-						'marker-size': '{{$value["size"]}}',
-						'marker-color': '{{$value["color"]}}'
-					@endif
-				}
-			};
-			geoJson.push(marker);
-		@endforeach
+		@if (isset($map_input['markers']))              
+			@foreach($map_input["markers"] as $value)
+				var marker={
+					"type": "Feature",
+					"geometry": {
+						"type": "Point",
+						"coordinates": [{{$value["lon"]}}, {{$value["lat"]}}]
+					},
+					"properties": {
+						@if (isset($value['title']))
+							title: '{{$value["title"]}}',
+						@endif
+						@if (isset($value['description']))
+							description: '{{$value["description"]}}',				   
+						@endif
+						@if (isset($value['icon_url']))
+							"icon": {
+								"iconUrl": '{{$value["icon_url"]}}',
+								"iconSize": [{{$value["icon_width"]}}, {{$value["icon_height"]}}] // size of the icon
+							}
+						@else	             								
+							'marker-size': '{{$value["size"]}}',
+							'marker-color': '{{$value["color"]}}'
+						@endif
+					}
+				};
+				geoJson.push(marker);
+			@endforeach
+		@endif
 
         // Set a custom icon on each marker based on feature properties
         map.markerLayer.on('layeradd', function(e) {
