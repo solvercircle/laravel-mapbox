@@ -29,6 +29,7 @@ class MapboxServiceProvider extends ServiceProvider {
 	public function register()
 	{
 		//
+		$this->registerCommands();
 	}
 
 	/**
@@ -39,6 +40,38 @@ class MapboxServiceProvider extends ServiceProvider {
 	public function provides()
 	{
 		return array();
+	}
+	
+	//-------------------------------------Install Commands----------------------------------------------------------------------
+	public function registerCommands()
+	{		
+		$this->registerConfigureCommand();		
+		$this->registerInstallCommand();
+	
+		$this->commands(			
+			'mapbox::commands.config',			
+			'mapbox::commands.install'
+		);
+	}
+	
+	
+	
+	public function registerConfigureCommand()
+	{
+		$this->app['mapbox::commands.config'] = $this->app->share(function($app)
+		{
+			return new Console\ConfigureCommand;
+		});
+	}
+	
+	
+	
+	public function registerInstallCommand()
+	{
+		$this->app['mapbox::commands.install'] = $this->app->share(function($app)
+		{
+			return new Console\InstallCommand;
+		});
 	}
 
 }
