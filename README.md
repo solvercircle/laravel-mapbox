@@ -12,35 +12,35 @@ php artisan mapbox:install
 
 Usage Example
 ======================
-$map_input=array(
+	$map_input=array(
 
-	'lat'=>37.475256,
-	
-	'lon'=>-122.146646,
-	
-	'zoom'=>15,
-	
-	'center_title'=>'My Pizza Shop',
-	
-	'center_description'=>'Delicious pizza',
-	
-	'center_marker_size'=>'large',
-	
-	'center_marker_color'=>'#000',
-	
-	'markers'=>array(
-	
-		array('lat'=>37.474256,'lon'=>-122.146646,'size'=>'small','color'=>'#CCC'),
+		'lat'=>37.475256,
 		
-		array('lat'=>37.473256,'lon'=>-122.146646,'icon_url'=>'http://www.solvercircle.com/wp-content/themes/internet/images/icon/development.png','icon_width'=>50,'icon_height'=>50),
+		'lon'=>-122.146646,
 		
-		array('lat'=>37.472256,'lon'=>-122.146646,'title'=>'My home')
+		'zoom'=>15,
 		
-	)
+		'center_title'=>'My Pizza Shop',
+		
+		'center_description'=>'Delicious pizza',
+		
+		'center_marker_size'=>'large',
+		
+		'center_marker_color'=>'#000',
+		
+		'markers'=>array(
+		
+			array('lat'=>37.474256,'lon'=>-122.146646,'size'=>'small','color'=>'#CCC'),
+			
+			array('lat'=>37.473256,'lon'=>-122.146646,'icon_url'=>'http://www.solvercircle.com/wp-content/themes/internet/images/icon/development.png','icon_width'=>50,'icon_height'=>50),
+			
+			array('lat'=>37.472256,'lon'=>-122.146646,'title'=>'My home')
+			
+		)
+		
+	);
 	
-);
-
-echo Solvercircle\Mapbox\Mapbox::display($map_input);
+	echo Solvercircle\Mapbox\Mapbox::display($map_input);
 
 Usage
 ===========
