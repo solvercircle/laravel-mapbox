@@ -15,6 +15,7 @@ How to Install
 php artisan mapbox:install
 ```
 
+
 Usage Example
 ======================
 	$map_input=array(
