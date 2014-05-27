@@ -6,10 +6,7 @@ This laravel package will help to show mapbox map with given options
 How to Install
 ===================
 1. Download the package through composer by adding "solvercircle/mapbox": "dev-master" in your project's composer.json
-2. add the following in the providers array under app.php config file
-```
-'Solvercircle\Mapbox\MapboxServiceProvider'
-```
+2. add 'Solvercircle\Mapbox\MapboxServiceProvider' in the providers array under app.php config file
 3. Run the following command
 ``` 
 php artisan mapbox:install
