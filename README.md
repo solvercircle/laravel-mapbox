@@ -7,8 +7,10 @@ How to Install
 ===================
 1. Download the package through composer by adding "solvercircle/mapbox": "dev-master" in your project's composer.json
 1. add the following in the providers under app.php config file
+	
 	'Solvercircle\Mapbox\MapboxServiceProvider'
 3. Run the following command
+	
 	php artisan mapbox:install
 
 Usage Example
