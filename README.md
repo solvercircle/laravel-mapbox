@@ -1,5 +1,5 @@
-laravel-mapbox
-==============
+Laravel Mapbox
+===================
 
 This laravel package will help to show mapbox map with given options
 
